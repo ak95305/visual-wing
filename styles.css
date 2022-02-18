@@ -1,0 +1,922 @@
+    * {
+        font-family: open sans;
+    }
+    
+    a,
+    a:hover,
+    a:focus {
+        text-decoration: none;
+    }
+    
+    img {
+        width: 100%;
+    }
+    
+    section {
+        padding: 50px 0;
+    }
+    
+    .cta-btn a {
+        padding: 5px 20px;
+        font-weight: 600;
+        color: #FE690F;
+        border: 2px solid #FE690F;
+        border-radius: 5px;
+        display: inline-block;
+        transition: all .2s linear;
+    }
+    
+    .cta-btn a:hover {
+        color: #FFF;
+        border: 2px solid #FE690F;
+        background: #FE690F;
+        transition: all .2s linear;
+    }
+    
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .grey-text {
+        font-size: 15px;
+        font-weight: 700;
+        margin: 10px 0;
+        color: #727272;
+        line-height: 1.7;
+        /* padding: 0 20px; */
+    }
+    
+    .headings {
+        font-weight: 900;
+        letter-spacing: 1px;
+        color: #322054;
+        font-size: 45px;
+    }
+    
+    .headings.small {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+    
+    span.upper-text {
+        font-size: 22px;
+        font-weight: 800;
+        color: #FE2F14;
+    }
+    /*======== Header CSS Starts Here ==========*/
+    
+    .main-header .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 60px;
+    }
+    
+    .main-header .header .navbar .nav-item>a {
+        margin: 0 10px;
+        color: #3D3F44;
+        font-weight: 600;
+    }
+    
+    .main-header .header .hamburger {
+        display: none;
+    }
+    
+    .main-header .header .nav-container .checkbox {
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 32px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+    
+    .main-header .header .nav-container .hamburger-lines {
+        display: block;
+        height: 26px;
+        width: 32px;
+        top: 17px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .main-header .header .nav-container .hamburger-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #0e2431;
+    }
+    
+    .main-header .header .nav-container .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+    
+    .main-header .header .nav-container .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+    }
+    
+    .main-header .header .nav-container .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+    
+    .main-header .header .nav-container input[type="checkbox"]:checked~.hamburger-lines .line1 {
+        transform: rotate(45deg);
+    }
+    
+    .main-header .header .nav-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
+        transform: scaleY(0);
+    }
+    
+    .main-header .header .nav-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
+        transform: rotate(-45deg);
+    }
+    
+    .main-header .header .nav-container input[type="checkbox"]:checked~.logo {
+        display: none;
+    }
+    
+    .main-header .header .nav-container .menu-items {
+        display: none;
+    }
+    
+    .main-header .header .nav-container .menu-items>li {
+        margin: 30px 0;
+    }
+    
+    .main-header .header .nav-container .menu-items>li a,
+    .main-header .header .nav-container .menu-items>li label {
+        color: #3D3F44 !important;
+    }
+    
+    .main-header .header .nav-container input[type="checkbox"]:checked~.menu-items {
+        position: absolute;
+        list-style: none;
+        width: 88%;
+        top: 74px;
+        left: 50%;
+        text-align: center;
+        background: #fff;
+        display: block;
+        z-index: 1;
+        transform: translateX(-50%);
+        box-shadow: 0 0 10px 0 #adadad;
+    }
+    
+    label {
+        margin: 0;
+    }
+    
+    .drop-down::after {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: 0.255em;
+        vertical-align: 0.255em;
+        content: "";
+        border-top: 0.3em solid;
+        border-right: 0.3em solid transparent;
+        border-bottom: 0;
+        border-left: 0.3em solid transparent;
+    }
+    
+    #drop {
+        display: none;
+    }
+    
+    #drop:checked~.drop-down-menu {
+        display: block;
+    }
+    
+    ul.drop-down-menu li {
+        margin: 7px 0;
+    }
+    
+    .drop-down-menu {
+        display: none;
+    }
+    /*======== Header CSS Ends Here ==========*/
+    /*======== Hero Section CSS Starts Here ==========*/
+    
+    .hero-section {
+        min-height: 500px;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    
+    .hero-section span.upper-text {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+        letter-spacing: 3px;
+        font-size: 18px;
+        color: #322054;
+        font-weight: 500;
+    }
+    
+    .hero-section h1 {
+        font-weight: 900;
+        letter-spacing: 1px;
+        color: #322054;
+        font-size: 45px;
+    }
+    
+    .hero-section p {
+        margin: 15px 0;
+        padding: 0;
+    }
+    
+    .hero-section .share-bar a:nth-child(2) {
+        margin: 50px 15px;
+    }
+    
+    .hero-section .share-bar a img {
+        width: unset;
+        height: 100%;
+        margin: 20px auto;
+        display: block;
+    }
+    
+    .hero-section .share-bar a {
+        display: block;
+        height: 15px;
+        margin: 14px 15px;
+    }
+    
+    .hero-section .share-bar {
+        display: block;
+        position: absolute;
+        background: #fff;
+        box-shadow: 0 0 8px 0 #999;
+        bottom: 20px;
+    }
+    /*======== Hero Section CSS Ends Here ==========*/
+    /*======== Carousal Section CSS Starts Here ==========*/
+    
+    .carousal {
+        min-height: 550px;
+        background: #322054;
+        display: flex;
+        align-items: center;
+    }
+    
+    .carousal .carousel-control-next,
+    .carousal .carousel-control-prev {
+        width: 2%;
+    }
+    
+    .carousal .carousal-text {
+        padding: 0 60px;
+    }
+    
+    .carousal .carousal-text span.upper-text {
+        color: #fff;
+        font-weight: 700;
+        font-size: 22px;
+        margin: 15px 0;
+        display: block;
+    }
+    
+    .carousal .carousal-text h2 {
+        color: #fff;
+        font-weight: 700;
+        font-size: 35px;
+        margin: 15px 0;
+        display: block;
+        position: relative;
+    }
+    
+    .carousal .carousal-text h2::before {
+        content: "";
+        width: 5px;
+        height: 100px;
+        background: #fff;
+        display: block;
+        position: absolute;
+        left: -50px;
+        top: -5px;
+    }
+    
+    .carousal .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+    
+    .carousal .carousel-indicators .active {
+        background-color: unset;
+        border: 2px solid #fff;
+    }
+    
+    .carousal .carousel-indicators {
+        bottom: -50px;
+    }
+    /*======== Carousal Section CSS Ends Here ==========*/
+    /*======== Services Section CSS Starts Here ==========*/
+    
+    .services-heading {
+        text-align: center;
+        margin: 50px 0;
+    }
+    
+    .services-heading span.upper-text {
+        font-size: 22px;
+        font-weight: 800;
+        color: #FE2F14;
+    }
+    
+    .services-heading h1 {
+        font-size: 45px;
+        color: #322054;
+        font-weight: 900;
+    }
+    
+    .services-card {
+        text-align: center;
+        margin: 50px 0;
+    }
+    
+    .services-card .service-img {
+        width: 120px;
+        margin: auto;
+    }
+    
+    .services-card h2 {
+        font-size: 25px;
+        font-weight: 700;
+        margin: 10px 0;
+        color: #322054;
+    }
+    
+    .services-card p {
+        font-size: 15px;
+        font-weight: 700;
+        margin: 10px 0;
+        color: #727272;
+        line-height: 1.7;
+        padding: 0 20px;
+    }
+    /*======== Services Section CSS Ends Here ==========*/
+    /*======== Works Section CSS Starts Here ==========*/
+    
+    .works-heading {
+        text-align: center;
+        margin: 50px 0;
+    }
+    
+    .works-heading span.upper-text {
+        font-size: 22px;
+        font-weight: 800;
+        color: #FE2F14;
+    }
+    
+    .works-heading h1 {
+        font-size: 45px;
+        color: #322054;
+        font-weight: 900;
+    }
+    
+    .work-card {
+        margin: 10px;
+        box-shadow: 0 0 10px 5px rgb(160, 160, 160);
+    }
+    
+    .works .cta-btn {
+        margin: auto;
+        display: block;
+        width: fit-content;
+        margin-top: 50px;
+    }
+    
+    .works .cta-btn a {
+        padding: 10px 20px;
+        text-transform: capitalize;
+    }
+    /*======== Works Section CSS Ends Here ==========*/
+    /*======== Partnerss Section CSS Starts Here ==========*/
+    
+    .partners img {
+        opacity: .5;
+    }
+    
+    .partners {
+        background-color: #FAF8FF;
+        text-align: center;
+    }
+    
+    .company-logo {
+        width: 120px;
+        margin: 31px auto;
+    }
+    
+    .partners-heading h1 {
+        font-size: 45px;
+        color: #322054;
+        font-weight: 900;
+    }
+    
+    .partners-heading span.upper-text {
+        font-size: 22px;
+        font-weight: 800;
+        color: #FE2F14;
+    }
+    /*======== Partnerss Section CSS Ends Here ==========*/
+    /*======== Testimonials Section CSS Starts Here ==========*/
+    
+    .testimonial {
+        background-color: #FAF8FF;
+    }
+    
+    .testimonial h1 {
+        font-size: 45px;
+        color: #322054;
+        font-weight: 900;
+    }
+    
+    .testimonial span.upper-text {
+        font-size: 22px;
+        font-weight: 800;
+        color: #FE2F14;
+    }
+    
+    .testimonial-card {
+        background: #fff;
+        border-radius: 19px;
+        box-shadow: 0 0 10px 5px rgb(189, 189, 189);
+        padding: 28px;
+        margin-top: 50px;
+    }
+    
+    .author {
+        display: flex;
+        align-items: center;
+    }
+    
+    .author img {
+        width: 80px;
+        border-radius: 50%;
+    }
+    
+    .autor-detail {
+        margin-left: 10px;
+    }
+    
+    .autor-detail h4 {
+        color: #322054;
+        font-size: 16px;
+        font-weight: 800;
+    }
+    
+    .author-desg {
+        padding: 0;
+        margin: 0;
+        line-height: 1.3;
+        font-size: 14px;
+    }
+    
+    .testimonial-text {
+        padding: 0;
+        min-height: 230px;
+        margin-top: 20px;
+    }
+    
+    .testimonial-card>img {
+        width: 70px;
+    }
+    /*======== Testimonials Section CSS Ends Here ==========*/
+    /*======== Let's Talk Section CSS Starts Here ==========*/
+    
+    .lets-talk {
+        min-height: 400px;
+        background: #322054;
+        display: flex;
+        align-items: center;
+    }
+    
+    .drink-img {
+        width: 150px;
+        margin: auto;
+    }
+    
+    .lets-talk .text h1 {
+        color: #fff;
+        font-weight: 800;
+        font-size: 35px;
+    }
+    
+    .text {
+        max-width: 400px;
+    }
+    
+    .lets-talk .text p {
+        color: #fff;
+        font-size: 14px;
+    }
+    
+    .text .cta-btn {
+        margin-top: 40px;
+    }
+    /*======== Let's Talk Section CSS Ends Here ==========*/
+    /*======== Footer Section CSS Starts Here ==========*/
+    
+    .footer {
+        background: #322054;
+        color: #fff;
+    }
+    
+    .footer h1 {
+        font-size: 25px;
+        font-weight: 900;
+        margin: 12px 0;
+    }
+    
+    .footer p {
+        margin: 21px 0;
+        font-weight: 500;
+    }
+    
+    .footer a {
+        display: block;
+        margin: 21px 0;
+        font-weight: 500;
+        color: #fff;
+    }
+    /*======== Footer Section CSS Ends Here ==========*/
+    /*======== Team Page CSS Starts Here ==========*/
+    
+    .team-mem,
+    .join-team {
+        background: #FAF8FF;
+    }
+    
+    .team-mem.services .services-card .service-img {
+        width: 240px;
+        margin: auto;
+    }
+    
+    .join-team.lets-talk {
+        background: #FAF8FF;
+    }
+    
+    .join-team .text {
+        max-width: 600px;
+    }
+    
+    .join-team .drink-img {
+        width: 220px;
+        margin: auto;
+    }
+    /*======== Team Page CSS Ends Here ==========*/
+    /*======== Services Page CSS Starts Here ==========*/
+    
+    .services .main-header .header .nav-container .hamburger-lines .line {
+        background: #fff;
+    }
+    
+    .services .main-header {
+        background-color: #322054;
+        color: #fff;
+    }
+    
+    .services .main-header .header .navbar .nav-item>a {
+        color: #FFF;
+    }
+    
+    .services .main-header .cta-btn a {
+        color: #FFF;
+        border: 2px solid #FFF;
+    }
+    
+    .services .hero-section {
+        background-color: #322054;
+        min-height: 350px;
+        padding: 0 10px;
+    }
+    
+    .services .hero-section .service-head,
+    .services .hero-section .service-text {
+        color: #fff;
+    }
+    
+    .services .hero-section .service-text {
+        max-width: 430px;
+        line-height: 1.9;
+    }
+    
+    .services .hero-section .row {
+        align-items: center;
+    }
+    
+    .services .hero-section .carousel-control-next,
+    .services .hero-section .carousel-control-prev {
+        min-width: unset;
+        width: unset;
+        right: 0;
+    }
+    
+    .services .hero-section .question {
+        display: flex;
+        align-items: center;
+    }
+    
+    .services .service-head h2 {
+        font-size: 50px;
+    }
+    
+    .services .process {
+        margin: 60px 0 60px 20px;
+        overflow-x: auto;
+    }
+    
+    .services .process::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+    }
+    
+    .services .process::-webkit-scrollbar {
+        height: 10px;
+        background-color: #F5F5F5;
+    }
+    
+    .services .process::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+        background-color: #322054;
+    }
+    
+    .services .process-card {
+        max-width: 320px;
+        display: inline-block;
+        margin-right: 100px;
+    }
+    
+    .process-card-holder {
+        overflow: hidden;
+        width: max-content;
+    }
+    
+    .services .process-card p {
+        font-weight: 600;
+    }
+    
+    .services .process-card .process-img {
+        width: 110px;
+    }
+    
+    .services .process-card .process-num {
+        color: #b5aa2e;
+        display: flex;
+        align-items: center;
+    }
+    
+    .services .process-card .process-num .num {
+        display: inline-block;
+    }
+    
+    .services .process-card .process-num .process-num-line {
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+        background: #b5aa2e;
+        margin-left: 5px;
+        margin-top: 10px;
+    }
+    
+    .services .menu {
+        background-color: #FAF8FF;
+        padding: 50px 0;
+    }
+    
+    .services .menu .menu-heading {
+        text-align: center;
+    }
+    
+    .menu-items {
+        padding: 50px 0;
+    }
+    
+    .menu-items .item {
+        padding: 50px 0;
+    }
+    
+    .menu-items .item .row {
+        align-items: center;
+    }
+    
+    .menu-right {
+        margin-left: 70px;
+    }
+    
+    .menu-img {
+        width: 350px;
+        height: 250px;
+        background: #fff;
+        box-shadow: 0 0 10px 0 #999;
+    }
+    
+    .faq {
+        text-align: center;
+        padding: 50px 0;
+    }
+    
+    .faq .faq-heading {
+        max-width: 500px;
+        margin: auto;
+    }
+    
+    .faq-questions {
+        padding: 50px 0;
+    }
+    
+    .faq-block {
+        background: #fff;
+        box-shadow: 0 0 10px 0 #999;
+        border-radius: 10px;
+        padding: 30px;
+        text-align: left;
+        margin: 0 10px;
+    }
+    
+    .faq-block label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #aaa;
+        padding: 20px 0;
+    }
+    
+    .faq-block .ques {
+        max-width: 360px;
+    }
+    
+    .faq-block .plus {
+        transition: all linear .2s;
+        transform-origin: center center;
+        height: 24px;
+    }
+    
+    .faq-block .ans {
+        /* display: none; */
+        height: 0;
+        overflow: hidden;
+        transition: .3s ease;
+    }
+    
+    input {
+        display: none;
+    }
+    
+    .faq-block .grey-text.light {
+        font-weight: 600;
+        color: #999;
+    }
+    
+    .faq-block input:checked~.ans {
+        /* display: block; */
+        height: auto;
+    }
+    
+    .faq-block input:checked~label .plus {
+        transform: rotate(45deg);
+    }
+    /*======== Services Page CSS Ends Here ==========*/
+    /*======== SCREEN LESS THAN 475px ==========*/
+    
+    @media only screen and (max-width: 475px) {
+        section.carousal .carousal-text h2 {
+            font-size: 20px;
+        }
+        section.carousal .carousal-text span.upper-text {
+            font-size: 18px;
+        }
+        .lets-talk .text h1 {
+            font-size: 30px;
+        }
+        .services .hero-section p {
+            line-height: 1.5;
+        }
+        .services .hero-section {
+            min-height: 450px;
+        }
+    }
+    /*======== SCREEN LESS THAN 767px ==========*/
+    
+    @media only screen and (max-width: 767px) {
+        .headings {
+            font-size: 30px;
+        }
+        .main-header .header>.navbar,
+        .main-header .header>.cta-btn {
+            display: none;
+        }
+        .main-header .header .hamburger {
+            display: block;
+        }
+        .hero-section {
+            text-align: center;
+        }
+        .hero-section .hero-img {
+            width: 275px;
+            margin: auto;
+        }
+        .carousal .carousal-img {
+            width: 120px;
+        }
+        .carousal .carousel-inner {
+            padding: 0 40px;
+        }
+        .carousal .carousel-control-next,
+        .carousal .carousel-control-prev {
+            width: 10%;
+        }
+        .carousal .carousal .carousel-control-prev {
+            justify-content: flex-start;
+        }
+        .carousal .carousal .carousel-control-next {
+            justify-content: flex-end;
+        }
+        .carousal .carousal .carousal-text h2::before {
+            display: none;
+        }
+        .carousal .carousal-text {
+            padding: 0 0;
+        }
+        .services-heading h1,
+        .works-heading h1,
+        .partners-heading h1,
+        .testimonial-heading h1 {
+            font-size: 30px;
+        }
+        .author img {
+            width: 50px;
+        }
+        .drink-img {
+            display: none;
+        }
+        .services .hero-section .service-text {
+            max-width: unset;
+        }
+        .services .hero-section .carousel-control-next,
+        .services .hero-section .carousel-control-prev {
+            min-width: unset;
+            width: 100%;
+            right: 0;
+            top: unset;
+            bottom: -32px;
+        }
+        .services .hero-section {
+            text-emphasis: center;
+        }
+        .services .service-head h2 {
+            font-size: 35px;
+        }
+        .services .hero-section .question {
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .menu-right {
+            margin-left: unset;
+            text-align: center;
+        }
+        .menu-left {
+            text-align: center;
+        }
+        .menu-img {
+            margin: auto;
+        }
+        .faq-block {
+            margin: 20px 10px;
+        }
+    }
+    /*======== SCREEN LESS THAN 991px ==========*/
+    
+    @media only screen and (max-width: 991px) {
+        .main-header .header .navbar .nav-item>a {
+            margin: 0 5px;
+        }
+        .hero-section h1 {
+            font-size: 30px;
+        }
+        .hero-section {
+            min-height: 450px;
+        }
+        .carousal .carousal-text h2 {
+            font-size: 25px;
+        }
+        .carousal .carousal-text h2::before {
+            height: 80px;
+        }
+        .menu .menu-img {
+            width: 275px;
+            height: 200px;
+        }
+    }
